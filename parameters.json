@@ -1,0 +1,11 @@
+{
+  "splatterSize": 1,
+  "splatterCount": 90,
+  "ballPower": 50,
+  "fragmentCount": 12,
+  "ruptureThreshold": 9,
+  "splatterLifetime": 13.5,
+  "splatterSpeed": 1.0,
+  "fragmentLifetime": 60.0,
+  "melonRespawnDelay": 2.0
+}

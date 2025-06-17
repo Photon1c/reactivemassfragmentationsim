@@ -1,0 +1,38 @@
+=== RMF: Melon Protocol — Progress Log ===
+
+[✔] Project initialized with Vite + Three.js
+[✔] Modular file structure created (main.js, world.js, melon.js, ball.js, physics.js, effects.js)
+[✔] Basic melon rendered using SphereGeometry
+[✔] Projectile system implemented (mouse click spawns ball)
+[✔] Basic collision detection with rupture threshold logic
+[✔] Switched from fake motion to full Cannon.js rigidbody physics
+[✔] Melon rupture now triggers on real impact velocity
+[✔] Created dynamic splatter effect using random particle burst
+[✔] Scaled splatter intensity based on impact velocity
+[✔] Watermelon stripes and color now handled procedurally in Three.js (no Blender baking needed for base look)
+[✔] Fully procedural watermelon with realistic skin, rind, and flesh
+[✔] Fragments and seeds with robust physics, always accumulate on the ground
+[✔] Adjustable splatter size, count, speed, and lifetime (GUI + parameters.json)
+[✔] Adjustable fragment count, fragment lifetime, and melon respawn delay (GUI + parameters.json)
+[✔] Ground plane for debris and splatter accumulation
+[✔] Auto mode for continuous firing
+[✔] All controls update simulation in real time
+[✔] Strict ground boundary and improved gravity/drag for realistic fragment settling
+
+🧪 Current Prototype Features:
+- Fully modular, real-time projectile impact system
+- Gravity-aware physics
+- Splatter visuals (red juice droplets)
+- Velocity-based rupture logic
+- Real-time animated scene
+- Realistic accumulation of fragments, seeds, and splatter on ground
+- GUI for all major simulation parameters
+- Auto mode and respawn delay
+
+🚧 Backlog / Next Steps:
+[ ] Decal splatter stains on impact surfaces
+[ ] GUI: BURST THRESHOLD / RUPTURE MODE sliders
+[ ] Add "Protocol Selector" for Pumpkin, Pineapple, etc.
+[ ] Save GIF or video of rupture event
+[ ] Optional: Sound FX and slow-motion replay
+[⏸] Watermelon texture/material baking backlog (see pending.log)

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RMF: Melon Protocol</title>
+    <style>body { margin: 0; overflow: hidden; }</style>
+  </head>
+  <body>
+    <div id="control-panel" style="position: absolute; top: 16px; left: 16px; z-index: 20; background: rgba(30,30,30,0.97); color: #fff; border-radius: 10px; box-shadow: 0 2px 12px #0008; padding: 0; min-width: 0;">
+      <div id="panel-header" style="padding: 8px 16px; cursor: pointer; font-weight: bold; border-bottom: 1px solid #444; user-select: none;">⚙️ Controls</div>
+      <div id="panel-content" style="display: none; flex-direction: column; gap: 16px; padding: 16px;">
+        <button id="auto-mode-btn" style="padding: 8px 16px; font-size: 1em; background: #222; color: #fff; border: none; border-radius: 6px; cursor: pointer; opacity: 0.85;">Auto Mode</button>
+        <label style="display: flex; flex-direction: column; gap: 2px;">Splatter Size
+          <input id="splatter-size-slider" type="range" min="0.5" max="2.0" step="0.01" value="1" />
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 2px;">Splatter Count
+          <input id="splatter-count-slider" type="range" min="10" max="200" step="1" value="90" />
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 2px;">Ball Power
+          <input id="ball-power-slider" type="range" min="10" max="100" step="1" value="50" />
+        </label>
+      </div>
+    </div>
+    <div id="title-bar" style="position: absolute; top: 16px; left: 50%; transform: translateX(-50%); z-index: 20; display: flex; align-items: center; gap: 24px;">
+      <span id="main-title" style="font-size: 2em; font-weight: bold; color: #fff; text-shadow: 0 2px 8px #000;">RMF: Melon Protocol Sim</span>
+      <span id="info-blink" style="font-size: 1.1em; font-style: italic; color: #fff; opacity: 0.85; animation: blink 1s steps(2, start) infinite;">press i for info</span>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script type="module" src="/src/main.js"></script>
+    <style>
+      @keyframes blink {
+        0%, 100% { opacity: 0.85; }
+        50% { opacity: 0.2; }
+      }
+      #control-panel { transition: min-width 0.2s, max-width 0.2s; overflow: hidden; }
+      #panel-header { background: #232323; border-radius: 10px 10px 0 0; }
+      #panel-content label { font-size: 0.95em; }
+      #panel-content input[type=range] { width: 120px; }
+    </style>
+    <script>
+      // Collapsible panel logic
+      const header = document.getElementById('panel-header');
+      const content = document.getElementById('panel-content');
+      let expanded = false;
+      header.onclick = () => {
+        expanded = !expanded;
+        content.style.display = expanded ? 'flex' : 'none';
+      };
+      // Hide main title after 15s
+      setTimeout(() => {
+        const t = document.getElementById('main-title');
+        if (t) t.style.display = 'none';
+      }, 15000);
+    </script>
+  </body>
+</html>

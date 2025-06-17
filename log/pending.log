@@ -1,0 +1,13 @@
+=== RMF: Melon Protocol — Pending/Backlog ===
+
+[⏸] Watermelon texture/material baking backlog:
+    - Procedural stripes and color are now handled in Three.js for the procedural and GLB models.
+    - Blender baking workflow for stripes/cracks is only needed for future advanced models or more detailed textures.
+    - Document the process for future model updates.
+    - Investigate why baked images are black and resolve for future exports if needed.
+
+[ ] Decal splatter stains on impact surfaces
+[ ] Protocol selector for other fruits/vegetables
+[ ] GIF/video export, sound FX, slow-motion replay (optional)
+
+Note: All major simulation features (rupture, splatter, accumulation, GUI, respawn) are now implemented. Backlog is for advanced or optional features only. 
