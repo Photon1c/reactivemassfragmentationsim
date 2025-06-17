@@ -1,6 +1,10 @@
 # 🍉 RMF: Melon Protocol  
 *Splatter Engine for Soft-Body Rupture Dynamics*
 
+This all is now live [here](https://rmfmelonprotocol.netlify.app/).
+
+![sample](media/sample.gif)
+
 Three.js simulator of rigid and soft body physics using simple melon and ball as base templates.
 
 ---
